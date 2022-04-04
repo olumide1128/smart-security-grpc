@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option java_package = "smartsec.alarmService";
+
+
+// Defining a Service, a Service can have multiple RPC operations
+
+service alarmService{
+  rpc activateAlarm(google.protobuf.Empty) returns (alarmResponse);
+
+}
+
+message alarmResponse{
+	string msg = 1;
+}

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option java_package = "smartsec.lightService";
+
+
+// Defining a Service, a Service can have multiple RPC operations
+
+service lightService{
+  rpc onOffLight(stream lightRequest) returns (stream lightResponse);
+
+}
+
+message lightRequest{
+	int32 id = 1;
+	string action = 2;
+}
+
+message lightResponse{
+	string status = 1;
+}

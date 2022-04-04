@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option java_package = "smartsec.cameraService";
+
+
+// Defining a Service, a Service can have multiple RPC operations
+
+service cameraService{
+  rpc takeSnapshotOfAllCameras(google.protobuf.Empty) returns (stream imgDetail);
+
+  rpc repositionCameraById(positionRequest) returns (positionResponse);
+  
+  rpc getCameraStatusById(cameraRequest) returns (camera);
+
+}
+
+message imgDetail{
+	string img_base64 = 1;
+}
+
+message positionRequest{
+	int32 cameraId = 1;
+	string pan = 2;
+	string tilt = 3;
+	string rotation = 4;
+}
+
+message positionResponse{
+	string responseMsg = 1;
+}
+
+message cameraRequest{
+	int32 cameraId = 1;
+}
+
+
+message camera{
+	int32 cameraId = 1;
+	string battery = 2;
+	bool active = 3;
+	string pan = 4;
+	string tilt = 5;
+	string rotation = 6;
+
+}
