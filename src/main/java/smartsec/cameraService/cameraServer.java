@@ -23,7 +23,7 @@ public class cameraServer {
 			    .addService(new cameraServiceImpl())
 			    .build()
 			    .start();
-			System.out.println("\nServer V1.2 Started");
+			System.out.println("\nCamera Server Started");
 			
 			 server.awaitTermination();
 
@@ -37,7 +37,7 @@ public class cameraServer {
 			e.printStackTrace();
 		}
 	    
-	    System.out.println("Server started, listening on " + port);
+	    System.out.println("Camera Server started, listening on " + port);
 	}
 
 }
