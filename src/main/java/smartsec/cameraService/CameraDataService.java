@@ -39,7 +39,7 @@ public class CameraDataService {
 				File imgfile = new File(fullPath);
 				String base64Str = imgToBase64(imgfile);
 				
-				bStrings.add(base64Str.substring(0, 15));
+				bStrings.add(base64Str);
 			}
 		}catch(IOException e) {
 			return null;
