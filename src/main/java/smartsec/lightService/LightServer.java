@@ -12,7 +12,7 @@ public class LightServer {
 		// TODO Auto-generated method stub
 		
 		int port = 50052;
-		String service_type = "light_grpc._tcp.local.";
+		String service_type = "_http._tcp.local.";
 		String service_name = "lightGrpcServer";
 		SimpleServiceRegistration ssr = new SimpleServiceRegistration();
 		ssr.run(port, service_type, service_name);

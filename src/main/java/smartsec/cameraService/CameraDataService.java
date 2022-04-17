@@ -39,7 +39,7 @@ public class CameraDataService {
 				File imgfile = new File(fullPath);
 				String base64Str = imgToBase64(imgfile);
 				
-				bStrings.add(base64Str.substring(0, 50));
+				bStrings.add(base64Str.substring(0, 15));
 			}
 		}catch(IOException e) {
 			return null;
@@ -65,8 +65,14 @@ public class CameraDataService {
 		
 		JSONObject cam;
 		/*In order to update the JSON File*/
+		
         try {
     		cam = (JSONObject) camArr.get(id-1); //I am subtracting 1 to make the index in sync with the real ids
+    		
+    		Integer.parseInt(pan);
+    		Integer.parseInt(tilt);
+    		Integer.parseInt(rotation); //Validate position properties to check if they are Numbers
+    		
     		cam.put("pan",pan);
     		cam.put("tilt",tilt);
     		cam.put("rotation",rotation);
@@ -85,6 +91,8 @@ public class CameraDataService {
             return "Error updating position!";
         } catch (IndexOutOfBoundsException e) {
         	return "Id not found!";
+        } catch(NumberFormatException e) {
+        	return "Position Properties must be Number!";
         }
 		
 		return "Cam Position with id "+cam.get("cameraId")+" has been updated Successfully!";

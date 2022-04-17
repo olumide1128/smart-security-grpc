@@ -12,7 +12,7 @@ public class cameraServer {
 		// TODO Auto-generated method stub
 		
 		int port = 50051;
-		String service_type = "camera_grpc._tcp.local.";
+		String service_type = "_http._tcp.local.";
 		String service_name = "cameraGrpcServer";
 		SimpleServiceRegistration ssr = new SimpleServiceRegistration();
 		ssr.run(port, service_type, service_name);

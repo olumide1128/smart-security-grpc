@@ -56,6 +56,11 @@ public class cameraServiceImpl extends cameraServiceImplBase{
 	            responseObserver.onError(
 	                    Status.UNAVAILABLE.withDescription("Error updating position for Camera with Id "+request.getCameraId())
 	                            .asRuntimeException(metadata));
+		}else if(result == "Position Properties must be Number!") {
+	           Metadata metadata = new Metadata();
+	            responseObserver.onError(
+	                    Status.UNAVAILABLE.withDescription("Position Properties must be Number!")
+	                            .asRuntimeException(metadata));
 		}else {
 			positionResponse res = positionResponse.newBuilder().setResponseMsg(result).build();
 			

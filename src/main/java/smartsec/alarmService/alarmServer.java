@@ -13,7 +13,7 @@ public class alarmServer {
 		// TODO Auto-generated method stub
 		
 		int port = 50053;
-		String service_type = "alarm_grpc._tcp.local.";
+		String service_type = "_http._tcp.local.";
 		String service_name = "alarmGrpcServer";
 		SimpleServiceRegistration ssr = new SimpleServiceRegistration();
 		ssr.run(port, service_type, service_name);
