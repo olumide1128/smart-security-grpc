@@ -38,13 +38,14 @@ public class SimpleServiceDiscovery {
 			// TODO Auto-generated method stub
 			System.out.println("Service Resolved " + event.getInfo());
 			
-			/*
 			ServiceInfo serviceInfo = event.getInfo();
 			this.setServiceInfo(serviceInfo);
 			System.out.println("host " + serviceInfo.getHostAddress());
 			//this.setHost(serviceInfo.getHostAddress());
 			System.out.println("port " + serviceInfo.getPort());
 			this.setPort(serviceInfo.getPort());
+			
+			/*
 			System.out.println("type " + serviceInfo.getType());
 			System.out.println("name " + serviceInfo.getName());
 			System.out.println("Computername " + serviceInfo.getServer());
@@ -100,6 +101,7 @@ public class SimpleServiceDiscovery {
 			serviceInfo = msl.getServiceInfo();
 			port = msl.getPort();
 			System.out.println("This is the port retreived from jmDNS: " + port);
+			System.out.println();
 			
 			jmdns.close();
 			
