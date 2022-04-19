@@ -13,7 +13,7 @@ be used for registering and discovery of these smart services by our client GUI 
 
 ### - Output of takeSnapshot call
 
-![](https://github.com/olumide1128/smart-security-grpc/blob/master/screenshotsForGit/Screenshot%20(234).png)
+![](https://github.com/olumide1128/smart-security-grpc/blob/master/screenshotsForGit/Screenshot%20(240).png)
 
 ### - Interface of Reposition Camera RPC
 
