@@ -25,6 +25,11 @@ be used for registering and discovery of these smart services by our client GUI 
 
 ### - Interface of Get Camera Status RPC
 
+![](https://github.com/olumide1128/smart-security-grpc/blob/master/screenshotsForGit/Screenshot%20(234).png)
+
+### - Output of GetCameraStatus call
+
+
 
 
 
