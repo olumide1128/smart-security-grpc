@@ -17,5 +17,11 @@ be used for registering and discovery of these smart services by our client GUI 
 
 ### - Interface of Reposition Camera RPC
 
+![](https://github.com/olumide1128/smart-security-grpc/blob/master/screenshotsForGit/Screenshot%20(238).png)
+
+### - Output of RepositionCamera call
+
+
+
 
 
