@@ -1,6 +1,8 @@
 # smart-security-grpc
 Implementation of a smart security service using GRPC and the Java programming language
 
+Watch Presentation => https://www.youtube.com/watch?v=DmAffhL9JJ8
+
 ## Overview
 Development of Smart Security and surveillance Microservices using Java and Google RPC framework. 3 services are 
 being developed which are surveillance, alarm and light services, each with their own RPCs. The jmDNS library will 
